@@ -19,13 +19,13 @@
 import collections
 
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagrams_1(self, strs: List[str]) -> List[List[str]]:
 
 
 
 def main():
     srts = 
-    final = Solution.groupAnagrams(n)
+    final = Solution.groupAnagrams_1(n)
     print(final)
 
 
