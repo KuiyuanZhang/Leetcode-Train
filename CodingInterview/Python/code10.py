@@ -26,24 +26,32 @@
 
 class Solution(object):
     # 1. 递归
+    # 思路：把 f(n)f(n) 问题的计算拆分成 f(n-1)和f(n−2) 两个子问题的计算，并递归，以 f(0) 和 f(1) 为终止条件
     @classmethod
     def numWays_1(cls, n):
+        if n <= 1 : return n
+        return (cls.numWays_1(n-1) + cls.numWays_1(n-2)) % 1000000007  # 当n很大的时候可能会出现数字溢出，所以我们需要用结果对1000000007求余
 
-
-    # 2. 记忆化的递归
+    # 2. 记忆化递归
+    # 思路：在递归法的基础上，新建一个长度为 n 的数组，用于在递归时存储 f(0)至f(n) 的数字值，重复遇到某数字时则直接从数组取用，避免了重复的递归计算。
     @classmethod
-    def numWays_1(cls, n):
+    def numWays_2(cls, n):
+        tmp = []
+
+        
 
     # 3. 动态规划
+    # 思路： 以斐波那契数列性质 f(n+1)=f(n)+f(n−1) 为转移方程。
     @classmethod
-    def numWays_1(cls, n):
+    def numWays_3(cls, n):
+
 
 
 
 
 def main():
     n = 6
-    a = Solution.minPatchess_2(nums, n)
+    a = Solution.numWays_1(n)
     print(a)
 
 
