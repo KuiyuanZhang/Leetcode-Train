@@ -40,18 +40,25 @@ class Solution(object):
 
         
 
-    # 3. 动态规划
-    # 思路： 以斐波那契数列性质 f(n+1)=f(n)+f(n−1) 为转移方程。
+    # 3. 动态规划 + 滑动窗口
+    # 思路： 以斐波那契数列性质 dp(n+1)= (dp(n)+dp(n−1)) % 1000000007为转移方程。
     @classmethod
     def numWays_3(cls, n):
-
+        if n == 0 : return 1
+        if n < 3 : return n
+        a, b = 1, 2
+        for i in range(3, n):
+            tmp = b
+            b = (a+b) % 1000000007
+            a = tmp
+        return b
 
 
 
 
 def main():
     n = 6
-    a = Solution.numWays_1(n)
+    a = Solution.numWays_3(n)
     print(a)
 
 
