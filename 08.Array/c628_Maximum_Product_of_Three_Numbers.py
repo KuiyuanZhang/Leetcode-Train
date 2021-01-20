@@ -37,6 +37,8 @@ class Solution:
 
     # 3. 线性扫描(三树排序)
     # 只需要找出最小的两个数和最大的三个数
+    # 时间复杂度： O（n）
+    # 空间复杂度： O（1）
     @classmethod
     def maximumProduct_3(self, nums):
         a = b = c = float("-inf")   # 最大三个数的初始定义
