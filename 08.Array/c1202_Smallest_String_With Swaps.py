@@ -79,7 +79,7 @@ class Solution:
             for i,ch in zip(indices,string):
                 res[i] = ch
         return "".join(res)
-
+        
 def main():
     s = "dcab"
     pairs = [[0,3],[1,2]]

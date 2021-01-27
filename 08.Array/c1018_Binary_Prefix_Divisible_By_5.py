@@ -27,13 +27,13 @@ A[i] 为 0 或 1
 class Solution(object):
     # 1. 暴力+二进制+数组
     # 思路： 判断每个二进制前缀是否被five整除
-    @classmethode
+    @clas
     def prefixesDivBy5_1(self, A):
         return [not int("".join(map(str, A[:i])), 2)%5 for i in range(1, len(A)+1)]
 
     # 2. 暴力+二进制+数组 (优化)
     # 思路： 判断每个二进制前缀是否被five整除，用变量保存当前二进制前缀
-    @classmethode
+    @cla
     def prefixesDivBy5_2(self, A):
         a = ""
         res = []
@@ -46,7 +46,7 @@ class Solution(object):
     # 思路： 利用变量保存当前二进制前缀的值，每次判断是否被5整除，改变保存当前二进制前缀的值的变量并对5取余。
     # 二进制增加：先将前面的数乘2，再加上新增数。
     # 取余原因：  因为n*2%5 == n%5*2%5，所以取余，这样就不用保存非常大的数了。
-    @classmethode
+    @classmethold
     def prefixesDivBy5_3(self, A):
         res = []
         pre = 0
